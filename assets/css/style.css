@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Chiron+GoRound+TC:wght@200..900&display=swap');
+html,body,header,footer,nav,main,h1,h2,h3,h4,a,img,p,div,span,aside,article,menu,ul,ol,li{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    color: inherit;
+    text-decoration: none;
+    list-style: none;
+    font-family: "Chiron GoRound TC", sans-serif;
+}
+img{
+    vertical-align: bottom;
+}
+
+html,body{
+    width: 100%;
+    height: 100vh;
+    background-image: url("../images/background.jpg");
+    background-size: cover repeat;
+    background-position: center top;
+    overflow: hidden;
+    position: relative;
+}
+
+:root{
+    /* textColor 網站主要的文字顏色（一般段落文字、標準字） */
+    --textColor--: #2F2A25;
+    
+    /* textAction 用於強調文字或互動文字（按鈕、連結、操作提示文字） */
+    --textAction--: #F0B675;
+
+    /* textWhite 常用在深色背景上的文字或按鈕文字 */
+    --textWhite--: #FFFFFF;
+
+     /* --textGray 常用於次要文字、提示文字、禁用文字 */
+    --textGray--: #D9D9D9;
+
+     /* --AlphaBlack-- 帶透明度的黑色文字或遮罩 */
+    --AlphaBlack--: #00000088;
+
+   /* bntPink 粉紅色按鈕顏色 */
+    --bntPink--:#BC73B2;
+    
+    /* --transision--: 動畫過渡效果 */
+    --transision--: all 800ms ease;
+
+    /* --shadow-- 陰影效果 */
+    --shadow--: 3px 3px 3px gray;
+}
+header{
+    width: 100%;
+    height: 30vh;
+    line-height: 30vh;
+    text-align: center;
+    color:var(--textColor--);
+    opacity: 0.7; 
+}
+
+/*首頁設計*/
+main#home{
+    width: 100%;
+    height: calc(70vh - 40px);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+main#home img{
+    width: 100%;
+    max-height: 50vh;
+    object-fit: contain;
+}
+main#home .box{
+    width: 50%;
+    max-width: 200px;
+    min-width: 180px;
+    overflow: hidden;
+    position: relative;
+}
+main#home .box #prev,main#home .box #next{
+    position: absolute;
+    top: 40%;
+    font-size: 60px;
+    color: #6666;
+    cursor: pointer;
+    transition: var(--transision--);
+    z-index: 10;
+}
+main#home .box #prev:hover,main#home .box #next:hover{
+    color: var(--textWhite--);
+}
+main#home .box #prev{
+    left: -20px;
+}
+main#home .box #next{
+    right: -20px;
+}
+main#home .box .full{
+    width: 300%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    transition: var(--transision--);
+}
+main#home .box .full .item{
+    display: block;
+    width: calc((100% / 3));
+    position: relative;
+}
+
+main#home .box #prev,main#home .box #next{
+    position: absolute;
+    top: 40%;
+    font-size: 60px;
+    color: #6666;
+    cursor: pointer;
+    transition: var(--transision--);
+    z-index: 10;
+}
+main#home .box #prev:hover,main#home .box #next:hover{
+    color: var(--textWhite--);
+}
+main#home .box #prev{
+    left: -20px;
+}
+main#home .box #next{
+    right: -20px;
+}
+main#home .box .full{
+    width: 300%;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    transition: var(--transision--);
+}
+
+
+main#home .box .full .item{
+    display: block;
+    width: calc((100% / 3));
+    position: relative;
+}
+main#home .box .full .item img{
+    width: 100%;
+}
+main#home .box .full .item h3{
+    width: 100%;
+    height: 3em;
+    line-height: 3em;
+    text-align: center;
+    color: var(--textWhite--);
+    background-color: var(--bntPink--);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+    /*分頁設計*/
+header ul{
+    width: 100%;
+    line-height: 30vh;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    color: var(--textColor--);
+    font-weight: 700;
+}
+header ul li{
+    margin: 0 0.5em;
+}
+header ul li a{
+    padding: 0.5em 1em;
+    line-height: 2em;
+    border: 2px solid #c4c4c4;
+    background-color: var(--textGray--);
+    box-shadow: var(--shadow--);
+    transition: var(--transision--);
+}
+header ul li a:hover{
+    filter: brightness(1.2);
+}
+header ul li a:active{
+    box-shadow: var(--shadow--) inset;
+}
+header ul li a.action{
+    background-color: var(--textAction--);
+    border: 2px solid #f481e7;
+}
+main#draw{
+    width: 100%;
+    height: calc(70vh - 50px);
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+main#draw .box{
+    width: 50%;
+    max-width: 350px;
+    min-width: 250px;
+    font-size: 22px;
+    text-align: center;
+    line-height: 2.5em;
+    color: var(--textColor--);
+}
+main#draw .box ol li{
+    font-weight: 700;
+    cursor: pointer;
+    transition: var(--transision--);
+}
+
+main#draw .box ol li:hover{
+    background-color: var(--textAction--);
+    color: var(--textWhite--);
+    transform: scale(1.2);
+}
+
+main#draw #btn{
+    width: 100%;
+    height: 3em;
+    font-size: 20px;
+    background-color: var(--bntPink--);
+    color: var(--textWhite--);
+    border-radius: 10px;
+    box-shadow: var(--shadow--);
+    transition: var(--transision--);
+    margin: 0.5em 0;
+}
+main#draw .box #result{
+    text-align: justify;
+    line-height: 1.6em;
+    letter-spacing: 2px;
+}
+
+main#draw .box #result.none{
+    display: none;
+}
+
+main#draw .box ol .item.active{
+    transform: scale(1.2);
+    background-color: #550055;
+    color: #FFF;
+}
+
+footer{
+    width: 100%;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: var(--textWhite--);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: var(--AlphaBlack--);
+}
+
+#load{
+    width: 100%;
+    height: 100vh;
+    background-image: url(../images/background.jpg);
+    background-size: cover;
+    background-position: center top;
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 15;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#load img{
+    width: 250px;
+    transform-origin: 75% 90%;
+    animation: loading 500ms linear infinite;
+}
+#load.none{
+    display: none;
+}
+
+@keyframes loading{
+    0%{
+        transform: rotate(0);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+@media only screen and (min-width: 834px){
+    main#home .box{
+        width: 100%;
+        max-width: none;
+        min-width: none;
+    }
+    main#home .box .full{
+        width: 100%;
+        justify-content: center;
+        transition: none;
+        padding: 40px;
+        transform: translateX(0)!important;
+    }
+    main#home .box .full .item{
+        margin: 10px;
+        max-width: 350px;
+    }
+    main#home .box #prev,main#home .box #next{
+        display:none;
+    }
+}
+@media only screen and (min-width: 1200px){}
+@media only screen and (min-width: 1440px){}
