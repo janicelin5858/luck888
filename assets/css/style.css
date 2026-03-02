@@ -18,7 +18,7 @@ html,body{
     background-image: url("../images/background.jpg");
     background-size: cover repeat;
     background-position: center top;
-    overflow: hidden;
+    overflow: hidden; 
     position: relative;
 }
 
@@ -110,7 +110,7 @@ main#home .box .full .item{
 
 main#home .box #prev,main#home .box #next{
     position: absolute;
-    top: 40%;
+    top: 30%;
     font-size: 60px;
     color: #6666;
     cursor: pointer;
@@ -166,7 +166,7 @@ header ul{
     font-weight: 700;
 }
 header ul li{
-    margin: 0 0.5em;
+    margin: 0 0.18em;
 }
 header ul li a{
     padding: 0.5em 1em;
@@ -200,7 +200,7 @@ main#draw .box{
     min-width: 250px;
     font-size: 22px;
     text-align: center;
-    line-height: 2.5em;
+    line-height: 2em;
     color: var(--textColor--);
 }
 main#draw .box ol li{
@@ -228,7 +228,7 @@ main#draw #btn{
 }
 main#draw .box #result{
     text-align: justify;
-    line-height: 1.6em;
+    line-height: 1em;
     letter-spacing: 2px;
 }
 
